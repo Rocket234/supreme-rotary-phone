@@ -8,75 +8,50 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>"
             <style>
                 h1{
-                    position: relative;
                     animation-duration: 5s;
-                    animation-name: header;
-
+                    animation-name:headeranimation;
+                    animation-iteration-count: infinite;
                 }
-                .button{
+                #animation{
                     text-align: center;
-                    opacity: 0;
-                    animation-name:buttonanimation;
+                    position: relative;
+                    animation-name: animation;
                     animation-duration: 3s;
-                    animation-delay: 6s;
+                }
+                @keyframes headeranimation{
+                0%{color:rgb(255, 0, 0);}
+                20%{color:rgb(235, 155, 52);}
+                40%{color:rgb(222, 235, 52);}
+                60%{color:rgb(0, 255, 0);}
+                86%{color:rgb(52, 229, 235);}
+                100%{color:rgb(204, 52, 235);}
+                }
+                @keyframes animation{
+                    0%{left:-3000px;}
+                    100%{left:0px;}
+                }
 
-                }
-                @keyframes header{
-                    0%{left:0px; top:0px;}
-                    100%{left:0px; top:900px;}
-                }
-                @keyframes buttonanimation{
-                    0%{opacity: 0;}
-                    100%{opacity: 1;}
-                }
             </style>
 
         </head>
         <body>
+            <div id="animation">
             <h1>
-                Header
+                Cats
             </h1>
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index1.html">HTML page 1</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index2.html">HTML page 2</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index3.html">HTML page 3</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
-                </div>
-              </nav>
-<div class="button">
-<button type="button" class="btn btn-primary">Button</button>
-</div>
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://placekitten.com/408/287">
+        <img src="https://placekitten.com/200/287">
       </div>
       <div class="carousel-item">
-        <img src="https://placekitten.com/200/286">
+        <img src="https://placekitten.com/200/140">
       </div>
       <div class="carousel-item">
-        <img src="https://placekitten.com/96/139">
+        <img src="https://placekitten.com/200/138">
       </div>
     </div>
+  </div>
   </div>
   
         </body>
